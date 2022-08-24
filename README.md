@@ -1,4 +1,4 @@
 # Presentacion 
-+ Repositorio para la materia de programacion web
-+ Carlos Alberto Mrnchaca Ortiz
++ Repositorio para la materia de PROGRAMACION WEB
++ Carlos Alberto Menchaca Ortiz
 + 19100215
