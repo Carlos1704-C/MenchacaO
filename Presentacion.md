@@ -26,7 +26,7 @@ Me gustaria aprender Javascript y tambien sobre lenguajes de consulta(Base de da
 
 # 
 ## En que me gustaria especializarme 
-*Me gustaria especializarme en redes y bases de datos, se me hace interesante ese ambito*
+*Me gustaria especializarme en redes y bases de datos, se me hace interesante ese ambito, al igual que me gusta mucho el hardware, mantenimiento preventivo de computadoras*
 
 #
 ## Hobbies 
