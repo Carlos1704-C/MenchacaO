@@ -58,4 +58,37 @@ body
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.ventanaModal
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: silver;
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ventanaModal:target
+{
+    opacity: 1;
+    pointer-events: auto;
+    background: none;
+}
+
+.ventanaModal>div
+{
+    width: 400px;
+    position:relative;
+    margin: 10% auto;
+    padding: 5px;
+    border-radius: 10px;
+    background: white;
+}
+
+
+
 
