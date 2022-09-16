@@ -8,9 +8,8 @@
 ul
 {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
+
 
 li
 {
@@ -44,7 +43,7 @@ a
     text-decoration: none;
 }
 
-.subOpcion
+.SubOpcion
 {
     padding-left: 20px;
     background: darkgray;
