@@ -11,11 +11,11 @@
     height: 100vh;
     background-color: red;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 20% 70% 10%;
-    grid-template-areas: 'menulat encabezado encabezado'
-                         'menulat columna1 columna2'
-                         'menulat piepagina piepagina';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 40% 40%;
+    grid-template-areas: 'menulat menulat'
+                         'encabezado columna1'
+                         'columna2 piepagina';
     justify-content: stretch;
     justify-items: stretch;
     align-items: stretch;
@@ -25,7 +25,7 @@
 {
     /*width: 100px;*/
     /*height: 100px;*/
-    background-color: gray;
+    background-color: red;
     text-align: center;
     border: 2px solid black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -38,10 +38,16 @@
 #caja4{grid-area: columna2;}
 #caja5{grid-area: piepagina;}
 
+@media screen and(max-width:1000px)
+ {
+    .contenedor
+    {
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 20% 40% 40%; 
+        grid-template-areas: 'menulat menulat'
+        'encabezado columna1'
+        'columna2 piepagina';
+    }
 
-
-
-
-    
-
-    
+  
+}
