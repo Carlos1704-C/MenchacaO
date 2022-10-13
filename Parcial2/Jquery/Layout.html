@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="Layout.css">
+    <title>Gridlayout</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div id="cont" class="contenedor">
+        <div id="caja1" class="caja"><h1>Habilidades</h1><p>Darth vader es el elegido para darle equilibrio a la fuerza.</p></div>
+        <div id="caja2" class="caja">Darth Vader</div>
+        <div id="caja3" class="caja"><img src="https://marvellatinnews.com/wp-content/uploads/2022/02/darth-vader-portada.jpeg " width="200" height="200"><h6>Darth Vader</h6></div>
+        <div id="caja4" class="caja"><img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2019/12/hipertextual-que-regreso-palpatine-guionista-star-wars-ascenso-skywalker-explica-2019749474.jpg?fit=1920%2C1291&quality=50&strip=all&ssl=1" width="150" height="200"><h6>Maestro:</h6><h6>Palpatine</h6></div>
+        <div id="caja5" class="caja">El lado oscuro de la fuerza</div>
+    </div>
+
+
+    <button id="miboton1"> Hola Mundo 1</button> 
+    <button id="miboton2"> Hola Mundo 2</button>
+    <button id="miboton3"> Hola Mundo 3</button>
+
+
+    <script type="text/javascript">
+        document.getElementById("miboton2").onclick=function(){alert("click en boton 2");}
+
+        document.querySelector('#miboton3').addEventListener("click", Mifuncion2)
+        document.querySelector('#miboton3').addEventListener("click", Mifuncion1)
+
+        function Mifuncion1() {alert ("click en boton 3 / Funcion 1");}
+        function Mifuncion2() {alert ('click en boton 3 / Funcion 2');}
+
+
+        $(document).ready(function()
+        {
+            $("#miboton1").click(function()
+            {
+                alert("se escucho el click en la libreria Jquery");
+            });
+        }
+        )
+    
+        
+    </script>
+</body>
+</html>
