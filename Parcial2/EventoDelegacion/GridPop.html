@@ -9,41 +9,25 @@
 </head>
 <body>
     <div id="cont" class="contenedor">
-        <div id="caja1" class="caja"><h1>Habilidades</h1><p>Darth vader es el elegido para darle equilibrio a la fuerza, asi que puse una fuerza increible, una conexion con la fuerza muy grande.</p></div>
+        <div id="caja1" class="caja"><h1>Habilidades</h1><p>Darth vader es el elegido por la fuerza.</p></div>
         <div id="caja2" class="caja">Darth Vader</div>
         <div id="caja3" class="caja"><h6>Darth Vader</h6></div>
         <div id="caja4" class="caja"><h6>Maestro:</h6><h6>Palpatine</h6></div>
         <div id="caja5" class="caja">El lado oscuro de la fuerza</div>
     </div>
 
-    <div id = "Conteneedor" class="caja">
-        <div id="seccion1 " class="boton">
-            <button id="boton1">Boton 1</button>
-        </div>
-    </div>
-
-    <div id = "Conteneedor" class="caja">
-        <div id="seccion2" class="boton">
-            <button id="boton2">Boton 2</button>
-        </div>
-    </div>
-
     <script>
-        var elemento = document.getElementsById("Conteneedor");
-        elemento.addEventListener("click", cambiarCaja);
-        function cambiarCaja (evento)
-        {
-            console.log(evento);
-        }
-        if(document.getElementById(evento.target.id).classList.contains("caja"))
-        {
-            document.getElementById(evento.target.id).classList.toggle("caja1");
-        }
-        if(evento.target.id=="caja5")
-        {
-            elemento.removeEventListener("click",cambiarCaja);
-        }
+        var elem = document.getElementById("cont");
+        elem.addEventListener("click", contador);
+        function contador (evento){
+            event.target.innerHTML = "Funcion aceptada, se cambio el comportamiento"
+                }
     </script>
+
+
+     
+    
+    
 
 </body>
 </html>
