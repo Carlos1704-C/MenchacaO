@@ -1,0 +1,12 @@
+*
+{
+    background: rgb(7,7,8);
+background: linear-gradient(135deg, rgba(7,7,8,1) 0%, rgba(52,56,69,0.9724264705882353) 100%);
+}
+
+h1,h2
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: gold;
+}
