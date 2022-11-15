@@ -1,0 +1,17 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Pagina.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "msnodesqlv8": "^2.7.0",
+    "mssql": "^3.3.0"
+  }
+}

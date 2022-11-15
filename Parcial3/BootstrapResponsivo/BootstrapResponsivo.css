@@ -1,0 +1,18 @@
+h1
+{
+    text-align: center;
+}
+
+#btn
+{
+    height: 10%;
+    width: 10%;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    border-radius: 12px;
+}
+
+
+
+
