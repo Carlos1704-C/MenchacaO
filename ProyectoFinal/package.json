@@ -10,8 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "form-data": "^4.0.0",
-    "msnodesqlv8": "^2.7.0",
-    "mssql": "^3.3.0"
+    "mssql": "^9.0.1",
+    "rest-mssql-nodejs": "^1.0.10"
   }
 }
