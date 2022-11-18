@@ -7,5 +7,5 @@ $registro["FechaNacimiento"] = "16/11/2022";
 $registro["CURP"] = "MEOCO010417HTSNRRA5";
 $registro["Materia"] = "Taller de bases de datos";
 
-echo json_decode(registro);
+echo json_encode($registro);
 ?>
