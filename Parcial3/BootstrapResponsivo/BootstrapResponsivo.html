@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="BootstrapResponsivo.css">
-    <link rel="stylesheet" href="/MenchacaO/BootStrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="BootstrapResponsivo.js">
     <title>Formulario</title>
 </head>
 <body>
@@ -22,12 +20,12 @@
 
         <div class="col-md-4">
             <label for="apellido materno">Apellido materno:</label>
-        <input class="form-control" id="ApellidoMaterno" type="text" name="apellido materno"/>
+        <input class="form-control" id="ApellidoMaterno" type="text" name="ApellidoMaterno"/>
         </div>
 
         <div class="col-md-4">
             <label for="apellido paterno">Apellido paterno:</label>
-        <input class="form-control" id="ApellidoPaterno" type="text" name="apellido paterno"/>
+        <input class="form-control" id="ApellidoPaterno" type="text" name="ApellidoPaterno"/>
          </div>
 
          <div class="row">
@@ -73,13 +71,14 @@
         document.getElementById("btn").addEventListener("click",async () =>{
   let respuesta= await fetch ('configuracion.php');
   let dato =await respuesta.json();
-            document.getElementById("nombres").value =reg.nombres;
-            document.getElementById("ApellidoMaterno").value = reg.ApellidoMaterno;
-            document.getElementById("ApellidoMaterno").value = reg.ApellidoPaterno;
-            document.getElementById("Correo").value = reg.Correo;
-            document.getElementById("FechaNacimiento").value = reg.FechaNacimiento;
-            document.getElementById("CURP").value = reg.CURP;
-            document.getElementById("Materia").value = reg.Materia;
+            document.getElementById("nombres").value =dato.nombres;
+            document.getElementById("ApellidoMaterno").value = dato.ApellidoMaterno;
+            document.getElementById("ApellidoPaterno").value = dato.ApellidoPaterno;
+            document.getElementById("Correo").value = dato.Correo;
+            document.getElementById("FechaNacimiento").value = dato.FechaNacimiento;
+            document.getElementById("CURP").value = dato.CURP;
+            document.getElementById("Materia").value = dato.Materia;
+            document.getElementById("Direccion").value = dato.Direccion;
 });
     </script>
 
