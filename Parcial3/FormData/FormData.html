@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Stylesheet" href="FormData.css">
+  <title>Document</title>
 </head>
+
 <body>
 
-    <form id="formulario">
-        <label for="Id">Id:</label>
-        <input type="text" name="Id" id="Id">
-        <label for="Nombre">Nombre:</label>
-        <input type="text" name="Nombre" id="Nombre">
-        <label for="Apellido">Apellido:</label>
-        <input type="text" name="Apellido" id="Apellido">
-        <label for="Telefono">Telefono:</label>
-        <input type="text" name="Telefono" id="Telefono">
-        <label for="Edad">Edad:</label>
-        <input type="text" name="Edad" id="Edad">
-        <button id="btn">Consultar</button>
-    </form>
-    
-    <script>
-        document.getElementById("btn").addEventListener("click", async(event)=> {
-          event.preventDefault();
-          var datosFormulario = new FormData(document.getElementById("formulario"));
-          let respuesta = await fetch ('FormData.php',{
-            method : 'POST',
-            body: datosFormulario
-          })
-          let dato = await respuesta.json();
+  <h1>FormData con base de datos en WAMPSERVER</h1>
+  <h2>Menchaca Ortiz Carlos Alberto</h2>
+  <h3>19100215 </h3>
 
-          document.getElementById("Id").value = dato.Id_Alumno;
-          document.getElementById("Nombre").value = dato.Nombre;
-          document.getElementById("Apellido").value = dato.Apellido;
-          document.getElementById("Telefono").value = dato.Telefono;
-          document.getElementById("Edad").value = dato.Edad;
-        });
-      </script>
+  <form id="formulario">
+    <label for="Id">Id:</label>
+    <input type="text" name="Id" id="Id">
+    <label for="Nombre">Nombre:</label>
+    <input type="text" name="Nombre" id="Nombre">
+    <label for="Apellido">Apellido:</label>
+    <input type="text" name="Apellido" id="Apellido">
+    <label for="Telefono">Telefono:</label>
+    <input type="text" name="Telefono" id="Telefono">
+    <label for="Edad">Edad:</label>
+    <input type="text" name="Edad" id="Edad">
+    <button id="btn">Consultar</button>
+  </form>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", async (event) => {
+      event.preventDefault();
+      var datosFormulario = new FormData(document.getElementById("formulario"));
+      let respuesta = await fetch('FormData.php', {
+        method: 'POST',
+        body: datosFormulario
+      })
+      let dato = await respuesta.json();
+
+      document.getElementById("Id").value = dato.Id_Alumno;
+      document.getElementById("Nombre").value = dato.Nombre;
+      document.getElementById("Apellido").value = dato.Apellido;
+      document.getElementById("Telefono").value = dato.Telefono;
+      document.getElementById("Edad").value = dato.Edad;
+    });
+  </script>
 </body>
+
 </html>
