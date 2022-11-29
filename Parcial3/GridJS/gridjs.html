@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper"></div>
+
+    <script>
+        async function TraerDatos(){
+        let headersList = {
+            "Accept": "*/*",
+        }
+
+        let response = await fetch("http://localhost/apellidos/MenchacaO/Parcial3/GridJS/Conexion.php", {
+            method: "GET",
+            headers: headersList
+        });
+
+        let datos = await response.json();
+        
+        new gridjs.Grid({
+                columns: ["Id_Alumno", "Nombre", "Apellido", "Telefono", "Edad"], data: datos
+            }).render(document.getElementById("wrapper"));
+        }
+        TraerDatos();
+    </script>
+</body>
+
+</html>
