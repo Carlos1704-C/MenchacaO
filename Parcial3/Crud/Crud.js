@@ -11,7 +11,9 @@ async function TraerDatos(){
     let datos = await response.json();
     
     new gridjs.Grid({
-            columns: ["Id_Producto","Nombre_Producto","Precio_Producto","Marca"], data: datos
+            columns: ["Id_Alumno","Nombre","Apellido","Telefono","Edad"], data: datos
         }).render(document.getElementById("wrapper"));
     }
     TraerDatos();
+
+
