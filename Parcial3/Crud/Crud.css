@@ -1,0 +1,45 @@
+* {
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);    
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes myAnim {
+    0% {
+        opacity: 0.8;
+        transform: scale(0.2);
+    }
+
+    80% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(2.2);
+    }
+}
+
+#Titulo {
+    animation: myAnim 1.5s ease 0s 1 normal forwards;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+#Contenedor {
+    text-align: center;
+}
+
+#Botones {
+    margin: 0px auto;
+}
+
+
+
+#wrapper {
+    text-align: center;
+    margin: 0px auto;
+}
