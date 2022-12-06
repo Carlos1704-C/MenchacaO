@@ -17,6 +17,8 @@ $query = mysqli_query($con, $sql);
 </head>
 <body>
     <h1 id="Encabezado">Administrador de usuarios</h1>
+    
+    <img id="fotoempleado" src="https://thumbs.dreamstime.com/b/perfil-avatar-hombre-persona-usuario-administrador-de-usuarios-empresario-humano-icono-g%C3%A9nero-ilustraci%C3%B3n-vectorial-profesor-uso-194810496.jpg"height="200" width="200">
     <div class="Usuarios" id="Formusuarios">
         <h2>Crear usuario</h2>
         <form action="Agregar_Usuario.php" method="POST">
@@ -27,7 +29,7 @@ $query = mysqli_query($con, $sql);
 
 
     
-        <button type="submit" value="Agregar"><box-icon name='user-plus'></box-icon></box-icon></button>   
+        <button id="btnagg" type="submit" value="Agregar"><box-icon name='user-plus'></box-icon></box-icon></button>   
         
         </form>
     </div>
@@ -41,8 +43,8 @@ $query = mysqli_query($con, $sql);
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Correo</th>
-                    <th></th>
-                    <th></th>
+                    <th id="theditar">Editar</th>
+                    <th id="theliminar">Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -52,13 +54,15 @@ $query = mysqli_query($con, $sql);
                         <th><?= $row['Nombre'] ?></th>
                         <th><?= $row['Apellido'] ?></th>
                         <th><?= $row['Correo'] ?></th>
-                        <th><a href="Actualizar_Usuario.php?id=<?= $row['Id_Usuario'] ?>">Editar</a></th>
-                        <th><a href="Eliminar_Usuario.php?id=<?= $row['Id_Usuario'] ?>">Eliminar</a></th>
+                        <th><a href="Actualizar_Usuario.php?id=<?= $row['Id_Usuario'] ?>"><box-icon type='solid' name='edit'></box-icon></a></th>
+                        <th><a href="Eliminar_Usuario.php?id=<?= $row['Id_Usuario'] ?>"><box-icon type='solid' name='trash'></box-icon></a></th>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
         </table>
     </div>
+
+    
 
 </body>
 

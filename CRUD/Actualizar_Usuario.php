@@ -4,13 +4,11 @@ $con = conectar();
 
 
 
-    $Id_Usuario = $_GET['Id_Usuario'];
+$Id_Usuario = $_GET['id'];
 
     $sql = "SELECT * FROM infousuarios WHERE Id_Usuario ='$Id_Usuario'";
     $query = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($query);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +18,7 @@ $con = conectar();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Usuarios.css">
     <title>Document</title>
 </head>
 
@@ -28,18 +27,19 @@ $con = conectar();
     <body>
 
         <div class="Usuarios">
-            <h2>Editar usuario</h2>
+            <h1>Editar usuario</h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/2808/2808392.png" width="200" height="200">
             <form action="Editar_Usuario.php" method="POST">
-                <input type="text" name="Id" placeholder="Id" value="<? $row['Id_Usuario']?>">
-                <input type="text" name="Nombre" placeholder="Nombre" value="<? $row['Nombre']?>">
-                <input type="text" name="Apellido" placeholder="Apellido" value="<? $row['Apellido']?>">
-                <input type="text" name="Correo" placeholder="Correo" value="<? $row['Correo']?>">
+                <label for="Id">Id</label>
+                <input type="text" name="IdActualizar" placeholder="Id" value="<?= $row['Id_Usuario']?>">
+                <label for="Id">Nombre</label>
+                <input type="text" name="NombreActualizar" placeholder="Nombre" value="<?= $row['Nombre']?>">
+                <label for="Id">Apellido</label>
+                <input type="text" name="ApellidoActualizar" placeholder="Apellido" value="<?= $row['Apellido']?>">
+                <label for="Id">Correo</label>
+                <input type="text" name="CorreoActualizar" placeholder="Correo" value="<?= $row['Correo']?>">
 
-
-
-                <button type="submit" value="Actualizar">
-                    <box-icon type='solid' name='chevron-up-circle'></box-icon>
-                </button>
+                <input id="Actualizar" type="submit" value="Actualizar">
 
             </form>
         </div>
