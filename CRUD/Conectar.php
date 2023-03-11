@@ -2,7 +2,7 @@
 function conectar()
 {
     $servidor = 'localhost';
-    $basededatos = "bdusuarios";
+    $basededatos = "bdproductos";
     $usuario = "admin";
     $password = "rEPB(3yt64_NwJ[V";
     $port = "3308";

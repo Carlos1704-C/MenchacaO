@@ -4,9 +4,9 @@ $con = conectar();
 
 
 
-$Id_Usuario = $_GET['id'];
+$Id_Producto = $_GET['id'];
 
-    $sql = "SELECT * FROM infousuarios WHERE Id_Usuario ='$Id_Usuario'";
+    $sql = "SELECT * FROM productos WHERE Id_Producto ='$Id_Producto'";
     $query = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($query);
 ?>
@@ -27,19 +27,18 @@ $Id_Usuario = $_GET['id'];
     <body>
 
         <div class="Usuarios">
-            <h1>Editar usuario</h1>
-            <img src="https://cdn-icons-png.flaticon.com/512/2808/2808392.png" width="200" height="200">
-            <form action="Editar_Usuario.php" method="POST">
-                <label for="Id">Id</label>
-                <input type="text" name="IdActualizar" placeholder="Id" value="<?= $row['Id_Usuario']?>">
-                <label for="Id">Nombre</label>
-                <input type="text" name="NombreActualizar" placeholder="Nombre" value="<?= $row['Nombre']?>">
-                <label for="Id">Apellido</label>
-                <input type="text" name="ApellidoActualizar" placeholder="Apellido" value="<?= $row['Apellido']?>">
-                <label for="Id">Correo</label>
-                <input type="text" name="CorreoActualizar" placeholder="Correo" value="<?= $row['Correo']?>">
+            <h1 id="EncabezadoEditor">PRODUCT EDITOR</h1>
+            <form action="Editar_Usuario.php" method="POST" id="FormEditarProducto">
+               <!-- <label for="Id">Id</label>
+                <input type="text" name="IdActualizar" placeholder="Id" value="<?= $row['Id_Producto']?>">-->
+                <label for="Id">QUANTITY</label>
+                <input type="text" name="CantidadActualizar" placeholder="Cantidad" value="<?= $row['Cantidad']?>">
+                <label for="Id">DESCRIPTION</label>
+                <input type="text" name="DescripcionActualizar" placeholder="Descripcion" value="<?= $row['Descripcion']?>">
+                <label for="Id">IMPORT</label>
+                <input type="text" name="ImporteActualizar" placeholder="Importe" value="<?= $row['Importe']?>">
 
-                <input id="Actualizar" type="submit" value="Actualizar">
+                <input id="Actualizar" type="submit" value="Update">
 
             </form>
         </div>
